@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HijoComponent implements OnInit {
 
   constructor() { }
+  @Input() valorDelPadre: string;
 
   ngOnInit(): void {
+    console.log(this.valorDelPadre);
+  }
+  alertaValorPadre(){
+    alert(this.valorDelPadre)
   }
 
 }

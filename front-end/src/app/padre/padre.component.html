@@ -2,5 +2,7 @@
 <input type="text"
 [(ngModel)]="valorDelImput">
 {{valorDelImput}}
-<app-hijo>
+<app-hijo
+[valorDelPadre]="valorDelImput"
+>
 </app-hijo>
