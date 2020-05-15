@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,  OnDestroy } from '@angular/core';
 //import { EventEmitter } from 'protractor';
 //@nombreDecorador() decorador
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './mi-primer-componente.component.html',
   styleUrls: ['./mi-primer-componente.component.css']
 })
-export class MiPrimerComponenteComponent implements OnInit {
+export class MiPrimerComponenteComponent implements OnInit, OnDestroy {
 
 @Input() titulo: string;
 @Input() nombreBoton: string;
@@ -15,10 +15,19 @@ export class MiPrimerComponenteComponent implements OnInit {
 
 @Output() saludoHijo = new EventEmitter();
 
+fecha = new Date();
+sueldo: number = 3.1416;
+nombre: string = 'Ayrton';
 
-  constructor() { }
+constructor() { }
 
   ngOnInit(): void {
+    console.log('datos del padre en hijo');
+    console.log(this.datos);
+  }
+
+  ngOnDestroy() {
+
   }
 
  SALUDAR(){
