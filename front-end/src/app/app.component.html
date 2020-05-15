@@ -17,12 +17,15 @@
   <li>opcion</li>
 </ol>
 
+<app-padre>
+</app-padre>
+
+
 <app-mi-primer-componente 
 [titulo]="tituloPadre" 
 [nombreBoton]="nombreBotonPadre" 
 [imagenPath]="imagenPadre"
 [datos]="datosHijo"
 (saludoHijo)="obtenerRespuestaHijo($event)"
-
 >
 </app-mi-primer-componente>
