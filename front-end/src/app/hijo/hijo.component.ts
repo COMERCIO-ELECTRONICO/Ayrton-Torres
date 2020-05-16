@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PadreComponent } from '../padre/padre.component';
 
 @Component({
   selector: 'app-hijo',
@@ -6,15 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./hijo.component.css']
 })
 export class HijoComponent implements OnInit {
+ 
+  constructor(public age: PadreComponent) { }
 
-  constructor() { }
-  @Input() valorDelPadre: string;
-
+  @Input() valoredad: number;
+  edad:number;
+  
   ngOnInit(): void {
-    console.log(this.valorDelPadre);
-  }
-  alertaValorPadre(){
-    alert(this.valorDelPadre)
   }
 
+  ageCalcular(){
+    alert(this.valoredad)
+    this.edad=2020-this.valoredad;
+    this.age.edad=this.edad;
+    return this.valoredad
+  }
 }

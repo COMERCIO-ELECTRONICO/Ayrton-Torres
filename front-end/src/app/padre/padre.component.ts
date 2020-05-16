@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-padre',
@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PadreComponent implements OnInit {
 
   constructor() { }
-  valorDelImput = '';
+  @Input() edadvalor: number;
+  edad:number;
   ngOnInit(): void {
   }
 
