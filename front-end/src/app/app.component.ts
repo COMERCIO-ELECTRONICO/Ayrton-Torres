@@ -17,8 +17,10 @@ export class AppComponent {
   nombreBotonPadre : 'alertar!!!!!',
   imagenPadre : 'https://images7.memedroid.com/images/UPLOADED128/56fac5463ee89.jpeg'
   };
-
+  
   obtenerRespuestaHijo(evento){
     console.log(evento)
   }
+
 }
+
