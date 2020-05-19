@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prueba-estilos';
-  eventoClick(){
-    
+  title = 'proyecto-angular';
+  esconderHola = false;
+  arregloNuemros = [{ nombre: 'Ayrton' }, { nombre: 'Axel' }];
+  
+
+  eventoClick() {
+    this.esconderHola = true;
   }
+  
 }
