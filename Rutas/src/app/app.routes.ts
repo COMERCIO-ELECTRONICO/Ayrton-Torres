@@ -21,6 +21,11 @@ const rutas: Routes = [
         .then(usuario=>usuario.UsuarioModule)
     },
     {
+        path: 'pokemon',
+        loadChildren: () => import('./pokemon/pokemon.module')
+          .then(pokemon => pokemon.PokemonModule)
+      },
+    {
         path: '',
         redirectTo: 'inicio',
         pathMatch: 'full'
