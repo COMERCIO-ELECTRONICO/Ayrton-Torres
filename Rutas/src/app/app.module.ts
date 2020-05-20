@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './inicio/home/home.component';
 import {NoEncontradoComponent} from './inicio/no-encontrado/no-encontrado.component';
 import {AppRoutesComponent} from './app.routes';
+import { FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {AppRoutesComponent} from './app.routes';
     BrowserModule,
     AppRoutesComponent,
     UsuarioModule,
-    PokemonModule
+    PokemonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

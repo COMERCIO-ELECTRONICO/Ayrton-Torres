@@ -9,11 +9,17 @@ import {NoEncontradoComponent} from "./inicio/no-encontrado/no-encontrado.compon
 const rutas: Routes = [
     {
         path: 'inicio',
-        component: HomeComponent
+        component: HomeComponent,
     },
+
+    {
+        path: ':id/inicio',
+        component: HomeComponent,
+    },
+
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
     },
     {
         path: 'usuario',
