@@ -20,6 +20,10 @@ const rutas: Routes = [
     component: PerfilUsuarioComponent,
   },
   {
+    path: 'profesor/perfil',
+    component: PerfilUsuarioComponent,
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
