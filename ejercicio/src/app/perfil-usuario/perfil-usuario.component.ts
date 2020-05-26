@@ -1,5 +1,5 @@
-  
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilUsuarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    // private readonly router: Router,
+  ) { }
 
   ngOnInit(): void {
   }

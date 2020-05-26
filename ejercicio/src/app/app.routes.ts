@@ -24,6 +24,12 @@ const rutas: Routes = [
     component: PerfilUsuarioComponent,
   },
   {
+    path: 'usuario',
+    loadChildren: ()=>
+   import('./usuario/usuario.module')
+   .then(mod=>mod.UsuarioModule),
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
