@@ -18,10 +18,15 @@ module.exports = {
     edad: {
       type: 'number'
     },
-    esCasado: {
+    esCasado:{
       type: 'boolean'
     },
+    // RELACION ONE TO MANY
 
+    mascotas:{
+      collection: 'mascota',
+      via: 'idUsuario'
+    }
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
@@ -40,4 +45,3 @@ module.exports = {
   },
 
 };
-

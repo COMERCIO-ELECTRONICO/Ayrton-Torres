@@ -9,12 +9,18 @@ module.exports = {
 
   attributes: {
     nombre: {
-      type: 'string',   
+      type:'string'
     },
-    edad: {
-      type: 'number',
+    edad:{
+      type: 'number'
     },
-  
+
+    //RELATIONS MANY ONE
+    idUsuario:{
+      model: 'usuario'
+    }
+
+
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
@@ -32,4 +38,3 @@ module.exports = {
   },
 
 };
-
