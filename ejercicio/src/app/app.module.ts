@@ -1,4 +1,3 @@
-import { LoginService } from './services/login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -17,6 +16,9 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { UsuarioModule } from './usuario/usuario.module';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
+import { LoginService } from './services/login.service';
+import { LoginGuard } from './guards/login.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    LoginGuard
   ],
   bootstrap: [AppComponent],
 })

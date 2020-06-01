@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/Router';
 import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,9 @@ export class LoginComponent implements OnInit {
   // credenciales
   email = '';
   pass = '';
+
   correo = '';
+
   seleccionadoValor;
 
   valorAutocomplete = '';
@@ -22,20 +24,21 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly _router: Router,
-    private readonly _loginService
-    : LoginService
+    private readonly _loginService: LoginService,    
   ) {}
 
   ngOnInit(): void {
+    
 
-    this._loginService
+   /* this._loginService
       .metodoGet('http://localhost:1337/usuario')
       .subscribe((resultadoMetodoGet) => {
         console.log('Respuest de Get');
         console.log(resultadoMetodoGet);
-      });
+      });*/
 
   }
+
   seteoValorSeleccionado(eventoSeleecionado) {
     console.log(eventoSeleecionado);
     this.valorSeleecionado = eventoSeleecionado;
@@ -56,11 +59,19 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar() {
+    console.log('guardar')
+    
+    localStorage
+    .setItem(
+      'nombre',
+      JSON.stringify({nombre: 'Ayrton'})
+    )
+/*
     this._loginService
 .metodoPost(
   'http://localhost:1337/usuario',
   {
-    nombre: "Ayrton",
+    nombre: "kevin",
     edad: this.pass,
     correo: this.email,
     esCasado: true
@@ -74,20 +85,19 @@ export class LoginComponent implements OnInit {
 )
     if (this.pass === '1234') {
       alert(this.email);
-      if (this.valorSeleecionado === 'Ayrton') {
+      if (this.valorSeleecionado === 'kevin') {
         alert('es estudiante');
-
         this._router.navigate(['/estudiante', 'perfil']);
         // localhost:9000/estudiante/perfil
       }
     } else {
       alert('no ingreso');
-    }
+    }*/
   }
 
   eliminarRegitroPorId(){
     this._loginService
-    .metodoDelete('http://localhost:1337/usuario/2').subscribe(
+    .metodoDelete('http://localhost:1337/usuario/13').subscribe(
       (respuestDelete)=>{
         console.log(' repuesta de delete');
         console.log(respuestDelete);
