@@ -1,0 +1,55 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3">       
+      </div>
+      <div class="col-sm-6">
+       
+        <form class="form-signin" class="services-group0" style="margin-top: 5rem; background-color:  azure;">
+
+       <div style="float:right; font-size: 80%; position: relative; top:-10px "  class="services-group1" style="margin-top: 5rem;"><a style="margin-right: 3rem" [routerLink]="['/registro']">Registrate</a></div>
+    
+
+       <div class="text-center mb-6" class="services-group2">
+         <img class="mb-4 img-fluid"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRHAtTXHc3tsXyACoonzapgLiPGf1o0GNI4FvA2xXohmi6LgLQ1&usqp=CAU" alt="" width="100" height="100">
+          <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+        </div>
+
+
+            <div class="form-label-group" class="services-group2">
+              <input type="email" id="inputEmail" class="form-control" 
+              matInput
+              required
+              placeholder="xxx@xxx.com"
+              name="email"
+              [(ngModel)]="email"
+              >
+              <label for="inputEmail">Email address</label>
+            </div>
+          
+            <div class="form-label-group"  class="services-group2">
+              <input type="password" id="inputPassword" class="form-control" 
+              matInput
+              required
+              name="pass"
+              [(ngModel)]="pass"
+              placeholder="****"
+              >
+              <label for="inputPassword">Password</label>
+            </div>
+          
+            <div class="checkbox mb-3"  class="services-group2">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <div  class="services-group1" type="button" (click)="ingresar()">Ingresar</div>
+         
+            <div class="mb-1"  class="services-group3">
+              <div style="float:right; font-size: 80%; position: relative; top:-10px " style="margin-top: 1rem;"><a style="margin-right: 3rem" [routerLink]="['/inicio']">Volver</a></div>
+              </div> 
+              <p class="mt-5 mb-3 text-muted text-center"  class="services-group1">&copy; 2020</p>
+          </form>  
+      </div>      
+      </div>
+    
