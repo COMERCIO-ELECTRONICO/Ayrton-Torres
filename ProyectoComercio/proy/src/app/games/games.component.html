@@ -1,1 +1,79 @@
-<p>games works!</p>
+
+<head>
+ 
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!--STYLES-->
+       <!--STYLES END-->
+  </head>
+
+  <body class="services-group1">  
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+          <a class="navbar-brand" href="/">Prodcutos</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+               
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/games', 'perfil']">inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/clientes']" >Clientes</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/productos']">Productos</a>
+              </li>
+
+              <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/login']">salir</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+
+
+          <div class="row">
+            <div class="col">
+        
+        
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Pass</th>
+                    <th scope="col">eliminar</th>
+                    <th scope="col">Editar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let name of string">
+                    <td style="color: white;">{{name.id}}</td>
+                    <td style="color: white;">{{name.usuario}}</td>
+                    <td style="color: white;">{{name.email}}</td>
+                    <td style="color: white;">{{name.password}}</td>
+                   
+                   <td> <button type="submit" class="btn btn-primary" (click)='eliminar(name)'>Eliminar</button></td>
+                   <td> <button type="submit" class="btn btn-primary" >Editar</button></td>
+                  </tr>
+        
+                </tbody>
+              </table>
+        
+            </div>
+
+
+
+
+
+   
+
+

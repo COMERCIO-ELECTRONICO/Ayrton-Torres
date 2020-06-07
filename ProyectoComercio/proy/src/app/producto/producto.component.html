@@ -1,0 +1,118 @@
+<head>
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!--STYLES-->
+  <!--STYLES END-->
+</head>
+
+<body class="services-group3">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+    <a class="navbar-brand" href="/">Prodcutos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/games', 'perfil']">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/clientes']">Clientes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/productos']">Productos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']">salir</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+       
+<div class="col-sm-12" class="services-group1">
+
+
+  <div class="row">
+    <div class="col">
+      <div class="col-sm-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Imagen p</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">clasificacion</th>
+              <th scope="col">consola</th>
+              <th scope="col">fabricante</th>
+              <th scope="col">version</th>
+              <th scope="col">Editar</th>
+              <th scope="col">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let name of string">
+              <td><h4  style="color: white;">{{name.id}}</h4></td>
+              <td><img src="{{name.imagen}}" style="width: 10rem; size: 5rem;"></td>
+              <td><h4 style="color: white;">{{name.titulo}}</h4></td>
+              <td><h4  style="color: white;">{{name.clasificacion}}</h4></td>
+              <td><h4  style="color: white;">{{name.consola}}</h4></td>
+              <td><h4  style="color: white;">{{name.fabricante}}</h4></td>
+              <td><h4  style="color: white;">{{name.version}}</h4></td>
+                        
+
+              <td><button type="submit" class="btn btn-primary" (click)='delete(name.id)'>Eliminar</button>
+                <td><button type="submit" class="btn btn-primary" (click)='Editar(name.id)'>Editar</button>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+ 
+
+    <div class="col">
+      <form class="services-group1">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Título</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="titulo" [(ngModel)]="titulo">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Clasificaion</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="clasificacion"
+            [(ngModel)]="clasificacion">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">consola</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="consola" [(ngModel)]="consola">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">fabricante</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="fabricante" [(ngModel)]="fabricante">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">version</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="version" [(ngModel)]="version">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Rura Imagen</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="imagen" [(ngModel)]="imagen">
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="agregarPro()">Submit</button>
+      </form>
+    </div>
+
+
+ 

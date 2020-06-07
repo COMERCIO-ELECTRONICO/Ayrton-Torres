@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { GamesComponent } from './games/games.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ProductoComponent } from './producto/producto.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { EditaCliComponent } from './edita-cli/edita-cli.component';
 
 
 const rutas: Routes = [
@@ -18,9 +21,20 @@ const rutas: Routes = [
     path: 'iniciar-sesion',
     component: IniciarSesionComponent,
   },
+
+  {
+    path: 'EditaPerfil',
+    loadChildren: () =>
+    import('./perfiles/perfiles.module')
+      .then(mod => mod.PerfilesModule),
+  },
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'nosotros',
+    component: NosotrosComponent,
   },
   
   {
@@ -28,12 +42,20 @@ const rutas: Routes = [
     component: GamesComponent,
   },
   {
-    path: 'nosotros',
-    component: NosotrosComponent,
-  },
-  {
     path: 'registro',
     component: RegistroComponent,
+  },
+  {
+    path: 'clientes',
+    component: ClientesComponent,
+  },
+  {
+    path: ':editacli/:id',
+    component: EditaCliComponent,
+  },
+  {
+    path: 'productos',
+    component: ProductoComponent,
   },
   {
     path: '',

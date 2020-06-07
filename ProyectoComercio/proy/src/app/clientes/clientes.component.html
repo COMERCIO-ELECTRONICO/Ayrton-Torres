@@ -1,0 +1,115 @@
+<head>
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!--STYLES-->
+  <!--STYLES END-->
+</head>
+
+<body class="services-group1">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+    <a class="navbar-brand" href="/">Prodcutos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/games', 'perfil']">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/clientes']">Clientes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/productos']">Productos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']">salir</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="row">
+    <div class="col">
+
+
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">credencial</th>
+            <th scope="col">nomrbe</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">eliminar</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let name of string">
+            <td style="color: white;">{{name.id}}</td>
+            <td style="color: white;">{{name.credencial}}</td>
+            <td style="color: white;">{{name.nombre}}</td>
+            <td style="color: white;">{{name.direccion}}</td>
+            <td style="color: white;">{{name.telefono}}</td>
+            <td><button type="submit" class="btn btn-primary" (click)='delete(name.id)'>Eliminar</button>
+            <td><button type="submit" class="btn btn-primary" (click)='Editar(name.id)'>Editar</button>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+    <div class="col">
+      <form class="form-signin" class="services-group3" style="margin-top: 5rem; background-color:  azure;">
+        <tr>
+          <div class="col-sl-12">
+            <h4 style="color: white;">Agregar Clientes </h4>
+          </div>
+        </tr>
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">numero Credencial</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="3300" required
+            name="credencial" [(ngModel)]="credencial">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Nomre</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="nombre" required
+            name="nombre" [(ngModel)]="nombre">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Dirección</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Direccion" required
+            name="direccion" [(ngModel)]="direccion">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Teléfono</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Telefono" required
+            name="telefono" [(ngModel)]="telefono">
+        </div>
+
+
+
+        <div class="form-group">
+
+          <button type="button" class="btn btn-primary" (click)="agregar()">Agregar</button>
+        </div>
+
+
+      </form>
+
+    </div>
